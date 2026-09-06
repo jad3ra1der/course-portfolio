@@ -53,7 +53,6 @@ main>p {
     padding: 16px;
     display: flex;
     flex-wrap: wrap;
-    flex-basis: 33%;
     
 }
 
@@ -90,4 +89,4 @@ main>p {
 }
 
 @media (width >=480px) {.collection-card {flex-basis: 50%;}}
-@media (width <=1024px) {.collection-card {flex-basis: 33%;}}
+@media (width >=1024px) {.collection-card {flex-basis: 33%;}}
