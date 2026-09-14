@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+*
+
+h1, h2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: var(--black);
+    color: var(--green);
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}
+
+body {
+    --black: #000000;
+    --green: #00ff15;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: var(--black);
+    color: var(--green);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+a {
+    color: var(--black);
+    -webkit-text-fill-color: var(--black);
+    -webkit-text-stroke-color: var(--green);
+    -webkit-text-stroke-width: 1px;
+}
+
+.collection-grid {
+    margin: 24px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.collection-card {
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    background-color: var(--black);
+    border-color: var(--green);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.collection-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+.collection-card h2 {
+    display: flex;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 8px;
+    line-height: 1.2;
+    justify-content: center;
+}
+
+.collection-card .details {
+    font-size: 14px;
+    display: flex;
+    color: var(--green);
+    margin-bottom: 16px;
+    font-style: italic;
+    justify-content: center;
+}
+
+.collection-card .description {
+    display: flex;
+    font-size: 16px;
+    margin-bottom: 0;
+    line-height: 1.6;
+    justify-content: center;
+    text-align: center;
+}
+
+@media (width >=480px) {.collection-card {flex-basis: 50%;}}
+@media (width >=1024px) {.collection-card {flex-basis: 33%;}}
+
+.button {
+  position: relative;
+  padding: 1.5rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.matrix {
+  background: var(--black);
+  border: 2px solid var(--green);
+  color: var(--green);
+}
+
+.code-rain {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 255, 0, 0) 0%,
+    rgba(0, 255, 0, 0.2) 50%,
+    rgba(0, 255, 0, 0) 100%
+  );
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.matrix:hover .code-rain {
+  opacity: 1;
+  animation: rain 1s linear infinite;
+}
+
+@keyframes rain {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
